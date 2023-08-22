@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class WeaponBehaviour : MonoBehaviour
 {
-    public float Damage;
+    [SerializeField] private float damage;
+    public float Damage => damage;
 }
