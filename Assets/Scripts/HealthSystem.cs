@@ -15,7 +15,7 @@ public class HealthSystem
     {
         Health -= damage;
 
-        if (Health > 0)
+        if (Health < 0)
         {
             Health = 0;
         }
