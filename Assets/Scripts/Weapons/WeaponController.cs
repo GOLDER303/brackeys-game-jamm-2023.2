@@ -6,7 +6,6 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     [SerializeField] protected GameObject weaponPrefab;
-    [SerializeField] protected float damage;
     [SerializeField] protected float cooldown;
     [SerializeField] protected PlayerMovement playerMovement;
 
