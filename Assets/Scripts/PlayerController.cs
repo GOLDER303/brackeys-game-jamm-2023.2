@@ -28,17 +28,11 @@ public class PlayerController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void Update()
-    {
-        Debug.Log(healthSystem.Health);
-    }
-
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
             float damageAmount = other.gameObject.GetComponent<Enemy>().Damage;
-            Debug.Log("Damage: " + damageAmount);
             healthSystem.DealDamage(damageAmount);
         }
 
