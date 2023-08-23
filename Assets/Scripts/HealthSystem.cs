@@ -4,20 +4,29 @@ using UnityEngine;
 
 public class HealthSystem
 {
-    public float Health { private set; get; }
+    public float health { private set; get; }
 
-    public HealthSystem(int health)
+    private HealthBar healthBar;
+    private float initialHealth;
+
+    public HealthSystem(int health, HealthBar healthBar)
     {
-        this.Health = health;
+        this.health = health;
+        initialHealth = health;
+
+        Debug.Log(healthBar);
+        this.healthBar = healthBar;
     }
 
     public void DealDamage(float damage)
     {
-        Health -= damage;
+        health -= damage;
 
-        if (Health < 0)
+        if (health < 0)
         {
-            Health = 0;
+            health = 0;
         }
+
+        healthBar.SetSize(health / initialHealth);
     }
 }

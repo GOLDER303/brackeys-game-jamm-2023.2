@@ -7,15 +7,16 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float damage;
+    [SerializeField] private HealthBar healthBar;
 
     public float Damage => damage;
     public GameObject targetGameObject { set; private get; }
 
     private HealthSystem healthSystem;
 
-    public Enemy()
+    private void Start()
     {
-        healthSystem = new HealthSystem(100);
+        healthSystem = new HealthSystem(100, healthBar);
     }
 
     public void HandleDeath()

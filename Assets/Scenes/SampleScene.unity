@@ -481,6 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 406296650}
+  healthBar: {fileID: 1912328525}
 --- !u!61 &1070603528
 BoxCollider2D:
   m_ObjectHideFlags: 0

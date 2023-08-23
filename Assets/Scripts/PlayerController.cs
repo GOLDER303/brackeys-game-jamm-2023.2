@@ -6,17 +6,14 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private HealthBar healthBar;
 
     private HealthSystem healthSystem;
     private PlayerInput playerInput;
 
-    public PlayerController()
-    {
-        healthSystem = new HealthSystem(100);
-    }
-
     private void Awake()
     {
+        healthSystem = new HealthSystem(100, healthBar);
         playerInput = GetComponent<PlayerInput>();
     }
 
@@ -36,7 +33,7 @@ public class PlayerController : MonoBehaviour
             healthSystem.DealDamage(damageAmount);
         }
 
-        if (healthSystem.Health <= 0)
+        if (healthSystem.health <= 0)
         {
             HandleDeath();
         }
