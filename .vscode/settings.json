@@ -54,6 +54,7 @@
     },
     "dotnet.defaultSolution": "BrackeysGameJam2023.2.sln",
     "cSpell.words": [
-        "cooldown"
+        "cooldown",
+        "Mathf"
     ]
 }
