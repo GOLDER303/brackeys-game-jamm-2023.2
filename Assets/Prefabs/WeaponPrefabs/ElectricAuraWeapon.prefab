@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7454549700419899983}
   - component: {fileID: 6213325665639592974}
   - component: {fileID: 7391528265813612218}
-  - component: {fileID: 2114968296591583751}
   - component: {fileID: 6358379000339600426}
   m_Layer: 7
   m_Name: ElectricAuraWeapon
@@ -122,19 +121,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.1
---- !u!114 &2114968296591583751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6866987053968148360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3422cb048951085498bd2351a26296ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 100
 --- !u!114 &6358379000339600426
 MonoBehaviour:
   m_ObjectHideFlags: 0
