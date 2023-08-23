@@ -29,15 +29,16 @@ public class Enemy : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetGameObject.transform.position, moveSpeed * Time.deltaTime);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("Weapon"))
+
+        if (other.gameObject.CompareTag("Weapon"))
         {
-            float damageAmount = other.GetComponent<WeaponBehaviour>().Damage;
+            float damageAmount = other.gameObject.GetComponent<WeaponBehaviour>().Damage;
             healthSystem.DealDamage(damageAmount);
         }
 
-        if (healthSystem.Health == 0)
+        if (healthSystem.health == 0)
         {
             HandleDeath();
         }
