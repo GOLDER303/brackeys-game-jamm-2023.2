@@ -14,7 +14,6 @@ public class HealthSystem
         this.health = health;
         initialHealth = health;
 
-        Debug.Log(healthBar);
         this.healthBar = healthBar;
     }
 
