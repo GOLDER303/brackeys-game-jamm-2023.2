@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7454549700419899983}
   - component: {fileID: 6213325665639592974}
-  - component: {fileID: 646715346027259365}
-  - component: {fileID: 7861998935485168850}
-  - component: {fileID: 6013777955311884843}
-  - component: {fileID: 6722845061926162517}
+  - component: {fileID: 7391528265813612218}
+  - component: {fileID: 2114968296591583751}
+  - component: {fileID: 6358379000339600426}
   m_Layer: 7
-  m_Name: BulletWeapon
+  m_Name: ElectricAuraWeapon
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6866987053968148360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,9 +75,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
-  m_Sprite: {fileID: 21300000, guid: 0a70e2d560890a046be89cc58c674318, type: 3}
-  m_Color: {r: 0, g: 0.0194203, b: 0.5283019, a: 1}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 21300000, guid: ca2e819b502ba994ca7fee5769718157, type: 3}
+  m_Color: {r: 0.8473006, g: 0.8862745, b: 0.33725494, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -88,8 +87,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &646715346027259365
-BoxCollider2D:
+--- !u!58 &7391528265813612218
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -121,19 +120,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &7861998935485168850
+  m_Radius: 2.1
+--- !u!114 &2114968296591583751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,12 +131,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6866987053968148360}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f9550da43fcac34d97dd6e82cc99e28, type: 3}
+  m_Script: {fileID: 11500000, guid: 3422cb048951085498bd2351a26296ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 2
-  speed: 25
---- !u!114 &6013777955311884843
+  damage: 100
+--- !u!114 &6358379000339600426
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,16 +147,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534c89718bec24c4387cf302bfd49ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
---- !u!114 &6722845061926162517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6866987053968148360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f395ef339950cca48b76f30895a53ee4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  damage: 100

@@ -29,14 +29,9 @@ public class Enemy : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetGameObject.transform.position, moveSpeed * Time.deltaTime);
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    public void DealDamage(float damageAmount)
     {
-
-        if (other.gameObject.CompareTag("Weapon"))
-        {
-            float damageAmount = other.gameObject.GetComponent<WeaponBehaviour>().Damage;
-            healthSystem.DealDamage(damageAmount);
-        }
+        healthSystem.DealDamage(damageAmount);
 
         if (healthSystem.health == 0)
         {

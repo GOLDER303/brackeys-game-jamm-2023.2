@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileWeaponBehaviour : WeaponBehaviour
+public class ProjectileWeaponBehaviour : MonoBehaviour
 {
     [SerializeField] private float lifeTime;
     [SerializeField] protected float speed;

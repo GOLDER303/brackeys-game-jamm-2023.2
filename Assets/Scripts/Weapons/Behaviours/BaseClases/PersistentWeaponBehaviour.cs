@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PersistentWeaponBehaviour : WeaponBehaviour
+public class PersistentWeaponBehaviour : MonoBehaviour
 {
     public GameObject followedObject { set; get; }
 

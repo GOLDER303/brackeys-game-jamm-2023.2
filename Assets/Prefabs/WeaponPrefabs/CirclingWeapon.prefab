@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6213325665639592974}
   - component: {fileID: 646715346027259365}
   - component: {fileID: -4582276435676876978}
+  - component: {fileID: 4880002326893694544}
+  - component: {fileID: 6581753403669998396}
   m_Layer: 7
   m_Name: CirclingWeapon
   m_TagString: Weapon
@@ -74,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 0a70e2d560890a046be89cc58c674318, type: 3}
   m_Color: {r: 0.33882165, g: 0.8867924, b: 0.42211187, a: 1}
   m_FlipX: 0
@@ -143,6 +145,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5622c5de263e1fb47ab2bc39dbbbb3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
   speed: 10
   radius: 6
+--- !u!114 &4880002326893694544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6866987053968148360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f395ef339950cca48b76f30895a53ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6581753403669998396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6866987053968148360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534c89718bec24c4387cf302bfd49ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
