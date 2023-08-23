@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponController : MonoBehaviour
+public class OneShotWeaponController : MonoBehaviour
 {
     [SerializeField] protected GameObject weaponPrefab;
     [SerializeField] protected float cooldown;

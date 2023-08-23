@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : WeaponController
+public class BulletController : OneShotWeaponController
 {
     protected override void Attack()
     {
