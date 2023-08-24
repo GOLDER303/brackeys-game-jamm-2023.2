@@ -9,6 +9,9 @@ public class ChunksController : MonoBehaviour
     [SerializeField] private int loadDistance = 3;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private Transform parentTransform;
+    [SerializeField] private ResourceManager resourceManager;
+
+    public float ChunkSize => chunkSize;
 
     private Transform[] chunksGameObjects;
     private Vector3 prevPlayerPosition;
@@ -41,6 +44,7 @@ public class ChunksController : MonoBehaviour
                 Vector2 chunkCoordinates = new Vector2(xOffset, yOffset);
 
                 GameObject chunkGameObject = Instantiate(chunkPrefab, chunkCoordinates * chunkSize, Quaternion.identity, parentTransform);
+                chunkGameObject.GetComponent<Chunk>().resourceManager = resourceManager;
 
                 chunksGameObjects[i] = chunkGameObject.transform;
                 i++;
