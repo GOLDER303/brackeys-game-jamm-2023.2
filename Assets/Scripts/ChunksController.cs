@@ -8,6 +8,7 @@ public class ChunksController : MonoBehaviour
     [SerializeField] private int chunkSize = 15;
     [SerializeField] private int loadDistance = 3;
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private Transform parentTransform;
 
     private Transform[] chunksGameObjects;
     private Vector3 prevPlayerPosition;
@@ -32,8 +33,6 @@ public class ChunksController : MonoBehaviour
 
     private void SpawnInitialChunks()
     {
-        GameObject chunksParent = new GameObject("Chunks");
-
         int i = 0;
         for (int xOffset = -loadDistance; xOffset <= loadDistance; xOffset++)
         {
@@ -41,7 +40,7 @@ public class ChunksController : MonoBehaviour
             {
                 Vector2 chunkCoordinates = new Vector2(xOffset, yOffset);
 
-                GameObject chunkGameObject = Instantiate(chunkPrefab, chunkCoordinates * chunkSize, Quaternion.identity, chunksParent.transform);
+                GameObject chunkGameObject = Instantiate(chunkPrefab, chunkCoordinates * chunkSize, Quaternion.identity, parentTransform);
 
                 chunksGameObjects[i] = chunkGameObject.transform;
                 i++;
