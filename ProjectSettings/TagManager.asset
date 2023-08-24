@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Weapon
+  - Resource
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: PlayerCharacter
-    uniqueID: 45517657
+  - name: Background
+    uniqueID: 159012763
+    locked: 0
+  - name: Midground
+    uniqueID: 1340119713
+    locked: 0
+  - name: Foreground
+    uniqueID: 2810030445
     locked: 0

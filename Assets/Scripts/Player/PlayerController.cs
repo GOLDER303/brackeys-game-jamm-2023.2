@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     private HealthSystem healthSystem;
     private PlayerInput playerInput;
+    private Dictionary<string, int> resourcesHeld = new();
 
     private void Awake()
     {
@@ -39,4 +40,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Resource"))
+        {
+            string resourceName = other.GetComponent<Resource>().ResourceName;
+
+            if (!resourcesHeld.ContainsKey(resourceName))
+            {
+                resourcesHeld.Add(resourceName, 0);
+            }
+
+            resourcesHeld[resourceName]++;
+
+            Destroy(other.gameObject);
+        }
+    }
 }
