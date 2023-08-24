@@ -812,6 +812,8 @@ SortingGroup:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!60 &1070603530
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -845,28 +847,19 @@ SortingGroup:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!210 &1070603529
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070603521}
-  m_Enabled: 1
-  m_SortingLayerID: 1340119713
-  m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_SortAtRoot: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.09, y: 2.94}
+      - {x: -2.73, y: -1.5}
+      - {x: 2.71, y: -1.5}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1131274798
 GameObject:
   m_ObjectHideFlags: 0
