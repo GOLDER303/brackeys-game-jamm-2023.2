@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float damage;
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private float angleoffset = 0f;
 
     public float Damage => damage;
     public GameObject targetGameObject { set; private get; }
@@ -26,7 +27,8 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, targetGameObject.transform.position, moveSpeed * Time.deltaTime);
+        RotateTowardsTarget();
+        MoveTowardsTarget();
     }
 
     public void DealDamage(float damageAmount)
@@ -37,5 +39,18 @@ public class Enemy : MonoBehaviour
         {
             HandleDeath();
         }
+    }
+
+    private void RotateTowardsTarget()
+    {
+        Vector2 direction = targetGameObject.transform.position - transform.position;
+        direction.Normalize();
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(Vector3.forward * (angle + angleoffset));
+    }
+
+    private void MoveTowardsTarget()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, targetGameObject.transform.position, moveSpeed * Time.deltaTime);
     }
 }
