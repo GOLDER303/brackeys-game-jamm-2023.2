@@ -18,10 +18,12 @@ public class Chunk : MonoBehaviour
     private Vector3 prevPosition;
     private readonly List<GameObject> currentResources = new();
     private float maxDepth;
+    private Sprite defaultSprite;
 
     private void Start()
     {
         maxDepth = gameManager.MaxDepth;
+        defaultSprite = backgroundSpriteRenderer.sprite;
     }
 
     private void Update()
@@ -46,6 +48,10 @@ public class Chunk : MonoBehaviour
             {
                 backgroundSpriteRenderer.sprite = oceanFloorSprite;
             }
+        }
+        else if (backgroundSpriteRenderer.sprite != defaultSprite)
+        {
+            backgroundSpriteRenderer.sprite = defaultSprite;
         }
     }
 
