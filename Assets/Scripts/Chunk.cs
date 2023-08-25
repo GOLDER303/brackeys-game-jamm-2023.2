@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class Chunk : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer backgroundSpriteRenderer;
+    [SerializeField] private Color surfaceBackgroundColor;
+    [SerializeField] private Color maxDepthBackgroundColor;
+
     public ResourceManager resourceManager { set; private get; }
+    public DifficultyManager difficultyManager { set; private get; }
 
     private Vector3 prevPosition;
     private readonly List<GameObject> currentResources = new();
 
     private void Update()
     {
+        backgroundSpriteRenderer.color = Color.Lerp(surfaceBackgroundColor, maxDepthBackgroundColor, difficultyManager.CurrentDepthPercentage);
+
         if (transform.position != prevPosition)
         {
             UpdateResources();

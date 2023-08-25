@@ -129,3 +129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d860c51fa5e42f44990a5d65315487e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backgroundSpriteRenderer: {fileID: 8041825996168731654}
+  surfaceBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  maxDepthBackgroundColor: {r: 0, g: 0.0300688, b: 0.46226418, a: 1}

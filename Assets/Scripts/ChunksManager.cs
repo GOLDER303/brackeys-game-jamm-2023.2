@@ -9,6 +9,7 @@ public class ChunksManager : MonoBehaviour
     [SerializeField] private int loadDistance = 3;
     [SerializeField] private Transform playerTransform;
     [SerializeField] private ResourceManager resourceManager;
+    [SerializeField] private DifficultyManager difficultyManager;
 
     public float ChunkSize => chunkSize;
 
@@ -44,6 +45,7 @@ public class ChunksManager : MonoBehaviour
 
                 GameObject chunkGameObject = Instantiate(chunkPrefab, chunkCoordinates * chunkSize, Quaternion.identity, transform);
                 chunkGameObject.GetComponent<Chunk>().resourceManager = resourceManager;
+                chunkGameObject.GetComponent<Chunk>().difficultyManager = difficultyManager;
 
                 chunksGameObjects[i] = chunkGameObject.transform;
                 i++;
