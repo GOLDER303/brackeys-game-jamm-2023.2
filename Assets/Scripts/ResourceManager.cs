@@ -11,6 +11,17 @@ public class ResourceManager : MonoBehaviour
     [SerializeField] private ChunksManager chunksManager;
 
     private float chunkSize;
+    private readonly HashSet<Vector3> collectedResourcesPosition = new();
+
+    private void OnEnable()
+    {
+        PlayerController.OnResourceCollected += HandleResourceCollected;
+    }
+
+    private void OnDisable()
+    {
+        PlayerController.OnResourceCollected -= HandleResourceCollected;
+    }
 
     private void Start()
     {
@@ -30,8 +41,16 @@ public class ResourceManager : MonoBehaviour
 
         for (int i = 0; i < resourcesAmount; i++)
         {
-            //TODO: keep track of already collected resources
-            resourcesPositions[i] = new Vector3(Random.Range(spawnAreaMin.x, spawnAreaMax.x), Random.Range(spawnAreaMin.y, spawnAreaMax.y), 0f);
+            Vector3 position = new Vector3(Random.Range(spawnAreaMin.x, spawnAreaMax.x), Random.Range(spawnAreaMin.y, spawnAreaMax.y), 0f);
+
+            if (collectedResourcesPosition.Contains(position))
+            {
+                resourcesPositions[i] = Vector3.zero;
+            }
+            else
+            {
+                resourcesPositions[i] = position;
+            }
         }
 
         return resourcesPositions;
@@ -40,5 +59,10 @@ public class ResourceManager : MonoBehaviour
     public GameObject GetRandomResourcePrefab()
     {
         return resourcesPrefabs[Random.Range(0, resourcesPrefabs.GetLength(0))];
+    }
+
+    private void HandleResourceCollected(Resource resource)
+    {
+        collectedResourcesPosition.Add(resource.transform.position);
     }
 }

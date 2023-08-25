@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public static Action<Resource> OnResourceCollected;
+
     [SerializeField] private GameManager gameManager;
     [SerializeField] private HealthBar healthBar;
 
@@ -44,7 +47,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Resource"))
         {
-            string resourceName = other.GetComponent<Resource>().ResourceName;
+            Resource resource = other.GetComponent<Resource>();
+            string resourceName = resource.name;
 
             if (!resourcesHeld.ContainsKey(resourceName))
             {
@@ -52,6 +56,8 @@ public class PlayerController : MonoBehaviour
             }
 
             resourcesHeld[resourceName]++;
+
+            OnResourceCollected?.Invoke(resource);
 
             Destroy(other.gameObject);
         }

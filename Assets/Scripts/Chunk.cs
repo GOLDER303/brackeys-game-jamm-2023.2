@@ -30,6 +30,11 @@ public class Chunk : MonoBehaviour
 
         foreach (Vector3 resourcePosition in newResourcesPositions)
         {
+            if (resourcePosition == Vector3.zero)
+            {
+                continue;
+            }
+
             GameObject spawnedResource = Instantiate(resourceManager.GetRandomResourcePrefab(), resourcePosition, Quaternion.identity, transform);
             currentResources.Add(spawnedResource);
         }
