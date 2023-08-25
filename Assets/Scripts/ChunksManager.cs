@@ -46,6 +46,7 @@ public class ChunksManager : MonoBehaviour
                 GameObject chunkGameObject = Instantiate(chunkPrefab, chunkCoordinates * chunkSize, Quaternion.identity, transform);
                 chunkGameObject.GetComponent<Chunk>().resourceManager = resourceManager;
                 chunkGameObject.GetComponent<Chunk>().difficultyManager = difficultyManager;
+                chunkGameObject.GetComponent<Chunk>().chunkSize = chunkSize;
 
                 chunksGameObjects[i] = chunkGameObject.transform;
                 i++;

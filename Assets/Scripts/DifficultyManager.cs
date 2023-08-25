@@ -9,6 +9,7 @@ public class DifficultyManager : MonoBehaviour
 
     public float CurrentDepth => currentDepth;
     public float CurrentDepthPercentage => currentDepthPercentage;
+    public float MaxDepth => maxDepth;
 
     private float currentDepth;
     private float currentDepthPercentage;

@@ -7,12 +7,21 @@ public class Chunk : MonoBehaviour
     [SerializeField] private SpriteRenderer backgroundSpriteRenderer;
     [SerializeField] private Color surfaceBackgroundColor;
     [SerializeField] private Color maxDepthBackgroundColor;
+    [SerializeField] private Sprite oceanFloorSprite;
+    [SerializeField] private Sprite oceanUnderFloorSprite;
 
     public ResourceManager resourceManager { set; private get; }
     public DifficultyManager difficultyManager { set; private get; }
+    public float chunkSize { set; private get; }
 
     private Vector3 prevPosition;
     private readonly List<GameObject> currentResources = new();
+    private float maxDepth;
+
+    private void Start()
+    {
+        maxDepth = difficultyManager.MaxDepth;
+    }
 
     private void Update()
     {
@@ -22,6 +31,20 @@ public class Chunk : MonoBehaviour
         {
             UpdateResources();
             prevPosition = transform.position;
+        }
+
+        float currentDepth = -transform.position.y;
+
+        if (currentDepth >= maxDepth)
+        {
+            if (currentDepth - maxDepth >= chunkSize)
+            {
+                backgroundSpriteRenderer.sprite = oceanUnderFloorSprite;
+            }
+            else
+            {
+                backgroundSpriteRenderer.sprite = oceanFloorSprite;
+            }
         }
     }
 
