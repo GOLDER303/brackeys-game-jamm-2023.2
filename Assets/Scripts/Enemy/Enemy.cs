@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
 
     private HealthSystem healthSystem;
 
-    private void Start()
+    private void Awake()
     {
         healthSystem = new HealthSystem(100, healthBar);
     }
