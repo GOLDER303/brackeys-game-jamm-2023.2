@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private float maxDepth;
+
+    public float MaxDepth => maxDepth;
+
     public void GameOver()
     {
         // TODO:

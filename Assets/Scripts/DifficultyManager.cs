@@ -5,11 +5,10 @@ using UnityEngine;
 public class DifficultyManager : MonoBehaviour
 {
     [SerializeField] private GameObject playerGameObject;
-    [SerializeField] private float maxDepth = 1000f;
+    [SerializeField] private GameManager gameManager;
 
     public float CurrentDepth => currentDepth;
     public float CurrentDepthPercentage => currentDepthPercentage;
-    public float MaxDepth => maxDepth;
 
     private float currentDepth;
     private float currentDepthPercentage;
@@ -17,6 +16,6 @@ public class DifficultyManager : MonoBehaviour
     private void Update()
     {
         currentDepth = -playerGameObject.transform.position.y;
-        currentDepthPercentage = CurrentDepth / maxDepth;
+        currentDepthPercentage = CurrentDepth / gameManager.MaxDepth;
     }
 }
