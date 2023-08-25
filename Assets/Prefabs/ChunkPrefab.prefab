@@ -132,5 +132,5 @@ MonoBehaviour:
   backgroundSpriteRenderer: {fileID: 8041825996168731654}
   surfaceBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
   maxDepthBackgroundColor: {r: 0, g: 0.0300688, b: 0.46226418, a: 1}
-  oceanFloorSprite: {fileID: 21300000, guid: ca2e819b502ba994ca7fee5769718157, type: 3}
-  oceanUnderFloorSprite: {fileID: 21300000, guid: ad684a20a385873488fee52a288e6e73, type: 3}
+  oceanFloorSprite: {fileID: 21300000, guid: 0121c239662543d4490121b602dc541d, type: 3}
+  oceanUnderFloorSprite: {fileID: 21300000, guid: 0121c239662543d4490121b602dc541d, type: 3}
