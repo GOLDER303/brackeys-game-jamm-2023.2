@@ -1471,12 +1471,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bac9f03099eac34d98a83b2146edbe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4846297258015729042, guid: b363b43a3bff005418c95b2e50ee422c, type: 3}
+  enemyPrefabs:
+  - {fileID: 4846297258015729042, guid: b363b43a3bff005418c95b2e50ee422c, type: 3}
+  - {fileID: 4846297258015729042, guid: 542478ee9c664404a8e20200ef03b4be, type: 3}
+  - {fileID: 4846297258015729042, guid: cfa398ed3247ba8458c736eb7f14e72b, type: 3}
+  - {fileID: 4846297258015729042, guid: dac72cc447e9788409263a8b181e9e57, type: 3}
   playerGameObject: {fileID: 1070603521}
   minSpawnDelay: 4
   maxSpawnDelay: 1
   spawnDistance: 10
   difficultyManager: {fileID: 1449882688}
+  amountOfEnemyTypePerDepthLevel: 2
 --- !u!1 &1449882687
 GameObject:
   m_ObjectHideFlags: 0
