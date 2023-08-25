@@ -774,6 +774,7 @@ MonoBehaviour:
   loadDistance: 3
   playerTransform: {fileID: 1070603523}
   resourceManager: {fileID: 1350180711}
+  difficultyManager: {fileID: 1449882688}
 --- !u!4 &784365988
 Transform:
   m_ObjectHideFlags: 0
@@ -1472,8 +1473,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4846297258015729042, guid: b363b43a3bff005418c95b2e50ee422c, type: 3}
   playerGameObject: {fileID: 1070603521}
-  spawnDelay: 4
+  minSpawnDelay: 4
+  maxSpawnDelay: 1
   spawnDistance: 10
+  difficultyManager: {fileID: 1449882688}
 --- !u!1 &1449882687
 GameObject:
   m_ObjectHideFlags: 0

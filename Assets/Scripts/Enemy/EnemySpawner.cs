@@ -6,8 +6,10 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private Enemy enemyPrefab;
     [SerializeField] private GameObject playerGameObject;
-    [SerializeField] private float spawnDelay = 4f;
+    [SerializeField] private float minSpawnDelay = 4f;
+    [SerializeField] private float maxSpawnDelay = 1f;
     [SerializeField] private float spawnDistance = 15f;
+    [SerializeField] private DifficultyManager difficultyManager;
 
     private void Start()
     {
@@ -25,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
 
             spawnedEnemy.targetGameObject = playerGameObject;
 
-            yield return new WaitForSeconds(spawnDelay);
+            yield return new WaitForSeconds(minSpawnDelay + difficultyManager.CurrentDepthPercentage * (maxSpawnDelay - minSpawnDelay));
         }
     }
 }
