@@ -297,50 +297,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 6866987053968148360, guid: 9173cf181c98e20478cf477d7b4900f6, type: 3}
   playerGameObject: {fileID: 1070603521}
---- !u!1 &248350517
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 248350519}
-  - component: {fileID: 248350518}
-  m_Layer: 0
-  m_Name: Chunks
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!210 &248350518
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248350517}
-  m_Enabled: 1
-  m_SortingLayerID: 159012763
-  m_SortingLayer: 1
-  m_SortingOrder: 0
-  m_SortAtRoot: 0
---- !u!4 &248350519
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248350517}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &255957330
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,8 +749,9 @@ GameObject:
   m_Component:
   - component: {fileID: 784365988}
   - component: {fileID: 784365987}
+  - component: {fileID: 784365989}
   m_Layer: 0
-  m_Name: ChunkController
+  m_Name: ChunkManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -816,7 +773,6 @@ MonoBehaviour:
   chunkSize: 15
   loadDistance: 3
   playerTransform: {fileID: 1070603523}
-  parentTransform: {fileID: 248350519}
   resourceManager: {fileID: 1350180711}
 --- !u!4 &784365988
 Transform:
@@ -831,8 +787,20 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &784365989
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784365986}
+  m_Enabled: 1
+  m_SortingLayerID: 159012763
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &809141382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,7 +1337,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1350180711
 MonoBehaviour:
@@ -1392,7 +1360,7 @@ MonoBehaviour:
   - {fileID: 5004447897936825929, guid: 3a5abd58adfa14c41b9081e1c10eed1f, type: 3}
   minAmountOfResources: 1
   maxAmountOfResources: 2
-  chunksController: {fileID: 784365987}
+  chunksManager: {fileID: 0}
 --- !u!1 &1350251255
 GameObject:
   m_ObjectHideFlags: 0

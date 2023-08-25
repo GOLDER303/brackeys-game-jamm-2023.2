@@ -8,13 +8,13 @@ public class ResourceManager : MonoBehaviour
 
     [SerializeField] private int minAmountOfResources = 1;
     [SerializeField] private int maxAmountOfResources = 5;
-    [SerializeField] private ChunksController chunksController;
+    [SerializeField] private ChunksManager chunksManager;
 
     private float chunkSize;
 
     private void Start()
     {
-        chunkSize = chunksController.ChunkSize;
+        chunkSize = chunksManager.ChunkSize;
     }
 
     public Vector3[] GetResourcesPositions(Vector3 chunkCoordinates)

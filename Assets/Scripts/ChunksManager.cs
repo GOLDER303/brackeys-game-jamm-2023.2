@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChunksController : MonoBehaviour
+public class ChunksManager : MonoBehaviour
 {
     [SerializeField] private GameObject chunkPrefab;
     [SerializeField] private int chunkSize = 15;
     [SerializeField] private int loadDistance = 3;
     [SerializeField] private Transform playerTransform;
-    [SerializeField] private Transform parentTransform;
     [SerializeField] private ResourceManager resourceManager;
 
     public float ChunkSize => chunkSize;
@@ -43,7 +42,7 @@ public class ChunksController : MonoBehaviour
             {
                 Vector2 chunkCoordinates = new Vector2(xOffset, yOffset);
 
-                GameObject chunkGameObject = Instantiate(chunkPrefab, chunkCoordinates * chunkSize, Quaternion.identity, parentTransform);
+                GameObject chunkGameObject = Instantiate(chunkPrefab, chunkCoordinates * chunkSize, Quaternion.identity, transform);
                 chunkGameObject.GetComponent<Chunk>().resourceManager = resourceManager;
 
                 chunksGameObjects[i] = chunkGameObject.transform;
