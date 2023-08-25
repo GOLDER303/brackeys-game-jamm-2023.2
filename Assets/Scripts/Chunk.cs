@@ -35,7 +35,7 @@ public class Chunk : MonoBehaviour
                 continue;
             }
 
-            GameObject spawnedResource = Instantiate(resourceManager.GetRandomResourcePrefab(), resourcePosition, Quaternion.identity, transform);
+            GameObject spawnedResource = Instantiate(resourceManager.GetResourcePrefab(), resourcePosition, Quaternion.identity, transform);
             currentResources.Add(spawnedResource);
         }
     }

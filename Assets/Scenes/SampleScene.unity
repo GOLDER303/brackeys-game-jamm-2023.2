@@ -1360,7 +1360,9 @@ MonoBehaviour:
   - {fileID: 5004447897936825929, guid: 3a5abd58adfa14c41b9081e1c10eed1f, type: 3}
   minAmountOfResources: 1
   maxAmountOfResources: 2
-  chunksManager: {fileID: 0}
+  chunksManager: {fileID: 784365987}
+  difficultyManager: {fileID: 1449882688}
+  amountOfResourceTypePerDepthLevel: 3
 --- !u!1 &1350251255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,6 +1474,52 @@ MonoBehaviour:
   playerGameObject: {fileID: 1070603521}
   spawnDelay: 4
   spawnDistance: 10
+--- !u!1 &1449882687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1449882689}
+  - component: {fileID: 1449882688}
+  m_Layer: 0
+  m_Name: DifficultyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1449882688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449882687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486eba14682d68846beca45077f9a90f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerGameObject: {fileID: 1070603521}
+  maxDepth: 1000
+--- !u!4 &1449882689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449882687}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1481754099
 PrefabInstance:
   m_ObjectHideFlags: 0

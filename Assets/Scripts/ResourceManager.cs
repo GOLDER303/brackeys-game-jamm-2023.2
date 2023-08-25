@@ -9,6 +9,8 @@ public class ResourceManager : MonoBehaviour
     [SerializeField] private int minAmountOfResources = 1;
     [SerializeField] private int maxAmountOfResources = 5;
     [SerializeField] private ChunksManager chunksManager;
+    [SerializeField] private DifficultyManager difficultyManager;
+    [SerializeField] private int amountOfResourceTypePerDepthLevel;
 
     private float chunkSize;
     private readonly HashSet<Vector3> collectedResourcesPosition = new();
@@ -56,9 +58,17 @@ public class ResourceManager : MonoBehaviour
         return resourcesPositions;
     }
 
-    public GameObject GetRandomResourcePrefab()
+    public GameObject GetResourcePrefab()
     {
-        return resourcesPrefabs[Random.Range(0, resourcesPrefabs.GetLength(0))];
+        int minResourcePrefabIndex = (int)Mathf.Floor(resourcesPrefabs.GetLength(0) * difficultyManager.CurrentDepthPercentage);
+        int maxResourcePrefabIndex = minResourcePrefabIndex + amountOfResourceTypePerDepthLevel;
+
+        if (maxResourcePrefabIndex > resourcesPrefabs.GetLength(0))
+        {
+            maxResourcePrefabIndex = resourcesPrefabs.GetLength(0);
+        }
+
+        return resourcesPrefabs[Random.Range(minResourcePrefabIndex, maxResourcePrefabIndex)];
     }
 
     private void HandleResourceCollected(Resource resource)
