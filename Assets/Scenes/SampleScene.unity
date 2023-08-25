@@ -398,6 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971b6ba5b4df2c948b04e3ca9177d13b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxDepth: 1000
 --- !u!4 &406296651
 Transform:
   m_ObjectHideFlags: 0
@@ -774,6 +775,7 @@ MonoBehaviour:
   loadDistance: 3
   playerTransform: {fileID: 1070603523}
   resourceManager: {fileID: 1350180711}
+  gameManager: {fileID: 406296650}
   difficultyManager: {fileID: 1449882688}
 --- !u!4 &784365988
 Transform:
@@ -1011,6 +1013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  gameManager: {fileID: 406296650}
 --- !u!114 &1070603526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1512,7 +1515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerGameObject: {fileID: 1070603521}
-  maxDepth: 1000
+  gameManager: {fileID: 406296650}
 --- !u!4 &1449882689
 Transform:
   m_ObjectHideFlags: 0
