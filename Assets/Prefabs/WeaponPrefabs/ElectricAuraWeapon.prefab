@@ -240,7 +240,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1340119713
   m_SortingLayer: 2
-  m_SortingOrder: -1
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: bb6b5501f58229f4b865e8217c323388, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -442,6 +442,7 @@ GameObject:
   - component: {fileID: 7454549700419899983}
   - component: {fileID: 7391528265813612218}
   - component: {fileID: 6358379000339600426}
+  - component: {fileID: 8599596447207927468}
   m_Layer: 7
   m_Name: ElectricAuraWeapon
   m_TagString: Weapon
@@ -513,6 +514,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
+--- !u!210 &8599596447207927468
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6866987053968148360}
+  m_Enabled: 1
+  m_SortingLayerID: 1340119713
+  m_SortingLayer: 2
+  m_SortingOrder: 10
+  m_SortAtRoot: 0
 --- !u!1 &7245837599992401258
 GameObject:
   m_ObjectHideFlags: 0
