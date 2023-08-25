@@ -11,6 +11,7 @@ public class Chunk : MonoBehaviour
     [SerializeField] private Sprite oceanUnderFloorSprite;
 
     public ResourceManager resourceManager { set; private get; }
+    public GameManager gameManager { set; private get; }
     public DifficultyManager difficultyManager { set; private get; }
     public float chunkSize { set; private get; }
 
@@ -20,7 +21,7 @@ public class Chunk : MonoBehaviour
 
     private void Start()
     {
-        maxDepth = difficultyManager.MaxDepth;
+        maxDepth = gameManager.MaxDepth;
     }
 
     private void Update()
