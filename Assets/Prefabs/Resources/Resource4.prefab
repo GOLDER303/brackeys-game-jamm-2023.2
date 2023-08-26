@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c32a17dc2372c4293568a71ac17a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceName: Purple
+  resourceName: Resource4
 --- !u!58 &7755867757924209747
 CircleCollider2D:
   m_ObjectHideFlags: 0

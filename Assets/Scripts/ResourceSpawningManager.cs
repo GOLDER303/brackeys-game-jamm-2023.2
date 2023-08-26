@@ -18,12 +18,12 @@ public class ResourceSpawningManager : MonoBehaviour
 
     private void OnEnable()
     {
-        PlayerController.OnResourceCollected += HandleResourceCollected;
+        PlayerResourceManager.OnResourceCollected += HandleResourceCollected;
     }
 
     private void OnDisable()
     {
-        PlayerController.OnResourceCollected -= HandleResourceCollected;
+        PlayerResourceManager.OnResourceCollected -= HandleResourceCollected;
     }
 
     private void Awake()
