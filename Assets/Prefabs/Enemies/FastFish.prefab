@@ -399,10 +399,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 448c1496a04bac148b253e7ada0f06fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 20
   damage: 25
   healthBar: {fileID: 6006551784877593355}
   angleoffset: 0
+  canMove: 1
 --- !u!60 &2424028061202855020
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -484,7 +485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835337501753599367, guid: 37b881c5b39aff345aefa542e6fe048b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.4
+      value: -2.31
       objectReference: {fileID: 0}
     - target: {fileID: 3835337501753599367, guid: 37b881c5b39aff345aefa542e6fe048b, type: 3}
       propertyPath: m_LocalPosition.z
