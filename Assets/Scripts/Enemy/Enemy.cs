@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private float angleoffset = 0f;
     [SerializeField] private bool canMove = true;
+    [SerializeField] private int initialHealth;
 
     public float Damage => damage;
     public GameObject targetGameObject { set; private get; }
@@ -18,7 +19,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        healthSystem = new HealthSystem(100, healthBar);
+        healthSystem = new HealthSystem(initialHealth, healthBar);
     }
 
     public void HandleDeath()

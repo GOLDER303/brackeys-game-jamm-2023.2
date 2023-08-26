@@ -8,13 +8,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private GameObject upgradeMenuCanvas;
+    [SerializeField] private int initialHealth;
 
     private HealthSystem healthSystem;
     private PlayerInput playerInput;
 
     private void Awake()
     {
-        healthSystem = new HealthSystem(100, healthBar);
+        healthSystem = new HealthSystem(initialHealth, healthBar);
         playerInput = GetComponent<PlayerInput>();
     }
 
