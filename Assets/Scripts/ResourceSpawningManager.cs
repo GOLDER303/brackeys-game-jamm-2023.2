@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceManager : MonoBehaviour
+public class ResourceSpawningManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] resourcesPrefabs;
     [SerializeField] private int minAmountOfResources = 1;
