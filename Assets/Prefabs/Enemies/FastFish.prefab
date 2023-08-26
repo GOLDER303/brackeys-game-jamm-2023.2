@@ -404,6 +404,7 @@ MonoBehaviour:
   healthBar: {fileID: 6006551784877593355}
   angleoffset: 0
   canMove: 1
+  initialHealth: 100
 --- !u!60 &2424028061202855020
 PolygonCollider2D:
   m_ObjectHideFlags: 0

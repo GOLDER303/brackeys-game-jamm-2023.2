@@ -2478,6 +2478,7 @@ MonoBehaviour:
   gameManager: {fileID: 406296650}
   healthBar: {fileID: 1912328525}
   upgradeMenuCanvas: {fileID: 1029181226}
+  initialHealth: 100
 --- !u!210 &1070603529
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -3230,7 +3231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1421773071
 Transform:
   m_ObjectHideFlags: 0

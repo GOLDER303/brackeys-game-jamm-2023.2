@@ -621,6 +621,7 @@ MonoBehaviour:
   healthBar: {fileID: 6006551784877593355}
   angleoffset: 280
   canMove: 0
+  initialHealth: 100
 --- !u!212 &918648680812700083
 SpriteRenderer:
   m_ObjectHideFlags: 0
