@@ -30,6 +30,9 @@ public class AutoTargetBehaviour : ProjectileWeaponBehaviour
             hasHeading = true;
         }
 
+        float angle = Mathf.Atan2(heading.y, heading.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
         transform.position += speed * Time.deltaTime * heading;
     }
 

@@ -35,8 +35,8 @@ public class OneShotWeaponController : WeaponController
 
         if (!isEnabled)
         {
-            StartCoroutine(AttackCoroutine());
             cooldown = weaponData.stagesSOs[currentUpgradeStage].cooldown;
+            StartCoroutine(AttackCoroutine());
             isEnabled = true;
         }
         else

@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534c89718bec24c4387cf302bfd49ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponBehaviour: {fileID: 0}
+  weaponBehaviour: {fileID: 4727723291977409837}
 --- !u!1 &6866987053968148360
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,8 +117,6 @@ GameObject:
   - component: {fileID: 6213325665639592974}
   - component: {fileID: 7512034729801444573}
   - component: {fileID: 4727723291977409837}
-  - component: {fileID: -8322208175596195124}
-  - component: {fileID: 6978647454421068219}
   m_Layer: 7
   m_Name: AutoTargetWeapon
   m_TagString: Untagged
@@ -185,7 +183,7 @@ SpriteRenderer:
   m_SortingOrder: 14
   m_Sprite: {fileID: 21300000, guid: 6536454dda18bab49a69d04842ea88b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.89, y: 0.89}
@@ -242,31 +240,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 25
-  lifeTime: 7
+  lifeTime: 10
   speed: 6
---- !u!114 &-8322208175596195124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6866987053968148360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 534c89718bec24c4387cf302bfd49ec6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponBehaviour: {fileID: 4727723291977409837}
---- !u!114 &6978647454421068219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6866987053968148360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f395ef339950cca48b76f30895a53ee4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToBeDestroyed: {fileID: 6866987053968148360}

@@ -18,5 +18,5 @@ MonoBehaviour:
   resource4Amount: 0
   damage: 25
   cooldown: 2
-  speed: 6
+  speed: 25
   count: 0
