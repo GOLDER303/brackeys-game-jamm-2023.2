@@ -126,12 +126,12 @@ TextureImporter:
       name: BGsprites_0
       rect:
         serializedVersion: 2
-        x: 225
-        y: 617
-        width: 252
+        x: 202
+        y: 619
+        width: 291
         height: 370
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,27 +139,6 @@ TextureImporter:
       bones: []
       spriteID: 5d260ae4c3af9f242ab4f20f840b7739
       internalID: 1826131303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BGsprites_1
-      rect:
-        serializedVersion: 2
-        x: 451
-        y: 867
-        width: 39
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4af7c5837a12ad04db83a12962ddec76
-      internalID: 703514948
       vertices: []
       indices: 
       edges: []
@@ -173,7 +152,7 @@ TextureImporter:
         width: 227
         height: 454
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +173,7 @@ TextureImporter:
         width: 383
         height: 229
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,69 +181,6 @@ TextureImporter:
       bones: []
       spriteID: 58e516c987757ca48b4628af62821817
       internalID: 1904860575
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BGsprites_4
-      rect:
-        serializedVersion: 2
-        x: 204
-        y: 677
-        width: 51
-        height: 144
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57720d63e4492574cac0c21d2f7d355f
-      internalID: 2020328161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BGsprites_5
-      rect:
-        serializedVersion: 2
-        x: 463
-        y: 741
-        width: 14
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5829dda3a14b2b74eaa33aff442803c8
-      internalID: -349074631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BGsprites_6
-      rect:
-        serializedVersion: 2
-        x: 1004
-        y: 30
-        width: 459
-        height: 402
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5a6ba231d70e0c34089a5a5b3a7cd0d0
-      internalID: 1536920031
       vertices: []
       indices: 
       edges: []
@@ -278,7 +194,7 @@ TextureImporter:
         width: 497
         height: 387
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,6 +225,7 @@ TextureImporter:
       BGsprites_5: -349074631
       BGsprites_6: 1536920031
       BGsprites_7: -64041601
+      Resources_0: -919653886
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -35,7 +35,7 @@ public class ResourceManager : MonoBehaviour
     {
         Random.InitState(Mathf.FloorToInt(chunkCoordinates.x) ^ Mathf.FloorToInt(chunkCoordinates.y));
 
-        int resourcesAmount = Random.Range(minAmountOfResources, maxAmountOfResources);
+        int resourcesAmount = Random.Range(minAmountOfResources, maxAmountOfResources + 1);
 
         Vector3[] resourcesPositions = new Vector3[resourcesAmount];
 
@@ -59,10 +59,8 @@ public class ResourceManager : MonoBehaviour
         return resourcesPositions;
     }
 
-    public GameObject GetResourcePrefab(Vector3 chunkCoordinates)
+    public GameObject GetResourcePrefab()
     {
-        Random.InitState(Mathf.FloorToInt(chunkCoordinates.x) ^ Mathf.FloorToInt(chunkCoordinates.y));
-
         int minResourcePrefabIndex = (int)Mathf.Floor(resourcesPrefabs.GetLength(0) * difficultyManager.CurrentDepthPercentage);
         int maxResourcePrefabIndex = minResourcePrefabIndex + amountOfResourceTypePerDepthLevel;
 

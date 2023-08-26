@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7784067209576793011}
   - component: {fileID: 336668677016973718}
   - component: {fileID: 5797255954047941443}
-  - component: {fileID: 2516913699207713883}
+  - component: {fileID: 7755867757924209747}
   m_Layer: 9
-  m_Name: Resource 6
+  m_Name: Resource4
   m_TagString: Resource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 1340119713
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 81257f88221f94a4caba77b07f001d25, type: 3}
+  m_Sprite: {fileID: -64041601, guid: b4254e0f1b3f5c24f94234d803e15b8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceName: Purple
---- !u!58 &2516913699207713883
+--- !u!58 &7755867757924209747
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,6 +131,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.29, y: 0.51}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.11
+  m_Radius: 2.4859984

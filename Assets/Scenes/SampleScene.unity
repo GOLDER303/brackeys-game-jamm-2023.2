@@ -1360,15 +1360,13 @@ MonoBehaviour:
   resourcesPrefabs:
   - {fileID: 5004447897936825929, guid: 4895a08081473ea489cbbd0bc7076b2e, type: 3}
   - {fileID: 5004447897936825929, guid: 6de1bf44c629a9048bd56a4128af8f09, type: 3}
-  - {fileID: 5004447897936825929, guid: 425a18168bbeeea439069477132152a7, type: 3}
-  - {fileID: 5004447897936825929, guid: 1f2983245165b99449d47448870aa6de, type: 3}
   - {fileID: 5004447897936825929, guid: 202c8170f9d0e32478c0d9dad40d9fa1, type: 3}
-  - {fileID: 5004447897936825929, guid: 3a5abd58adfa14c41b9081e1c10eed1f, type: 3}
-  minAmountOfResources: 1
-  maxAmountOfResources: 2
+  - {fileID: 5004447897936825929, guid: 1f2983245165b99449d47448870aa6de, type: 3}
+  minAmountOfResources: 0
+  maxAmountOfResources: 1
   chunksManager: {fileID: 784365987}
   difficultyManager: {fileID: 1449882688}
-  amountOfResourceTypePerDepthLevel: 3
+  amountOfResourceTypePerDepthLevel: 2
 --- !u!1 &1350251255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,7 +1446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1421773071
 Transform:
   m_ObjectHideFlags: 0
