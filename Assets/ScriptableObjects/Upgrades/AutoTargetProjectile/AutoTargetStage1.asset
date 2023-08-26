@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27a8f7a953f680a4eb97f5d408961c7f, type: 3}
   m_Name: AutoTargetStage1
   m_EditorClassIdentifier: 
-  upgradeIcon: {fileID: 21300000, guid: 6536454dda18bab49a69d04842ea88b0, type: 3}
-  upgradeText: Auto Target Projectile
   resource1Amount: 2
   resource2Amount: 2
   resource3Amount: 0
   resource4Amount: 0
+  damage: 25
+  cooldown: 2
+  speed: 6
+  count: 0

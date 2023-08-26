@@ -10,6 +10,7 @@ public class WeaponController : MonoBehaviour
     protected int currentUpgradeStage = 0;
 
     protected int maxUpgradeStage;
+    protected bool isEnabled = false;
 
     protected virtual void Start()
     {

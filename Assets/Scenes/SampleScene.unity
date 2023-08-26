@@ -554,7 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 2cfb06935910d824ca0c8479bd11c39c, type: 2}
   upgradeUIElement: {fileID: 3050233781666125685}
-  weaponPrefab: {fileID: 6866987053968148360, guid: 9173cf181c98e20478cf477d7b4900f6, type: 3}
+  weaponPrefab: {fileID: -4582276435676876978, guid: 9173cf181c98e20478cf477d7b4900f6, type: 3}
   playerGameObject: {fileID: 1070603521}
 --- !u!1 &255957330
 GameObject:
