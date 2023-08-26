@@ -1015,6 +1015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gameManager: {fileID: 406296650}
+  topBorderBuffer: 5
 --- !u!114 &1070603526
 MonoBehaviour:
   m_ObjectHideFlags: 0

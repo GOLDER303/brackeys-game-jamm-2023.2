@@ -9,6 +9,7 @@ public class Chunk : MonoBehaviour
     [SerializeField] private Color maxDepthBackgroundColor;
     [SerializeField] private Sprite oceanFloorSprite;
     [SerializeField] private Sprite oceanUnderFloorSprite;
+    [SerializeField] private Sprite oceanSurfaceSprite;
 
     public ResourceManager resourceManager { set; private get; }
     public GameManager gameManager { set; private get; }
@@ -19,6 +20,7 @@ public class Chunk : MonoBehaviour
     private GameObject[] currentResources;
     private float maxDepth;
     private Sprite defaultSprite;
+    private bool hasDoneInitialUpdate;
 
     private void Start()
     {
@@ -31,9 +33,8 @@ public class Chunk : MonoBehaviour
     {
         backgroundSpriteRenderer.color = Color.Lerp(surfaceBackgroundColor, maxDepthBackgroundColor, difficultyManager.CurrentDepthPercentage);
 
-        if (transform.position != prevPosition)
+        if (transform.position != prevPosition || !hasDoneInitialUpdate)
         {
-            UpdateResources();
             prevPosition = transform.position;
 
             float currentDepth = -transform.position.y;
@@ -49,10 +50,27 @@ public class Chunk : MonoBehaviour
                     backgroundSpriteRenderer.sprite = oceanFloorSprite;
                 }
             }
-            else if (backgroundSpriteRenderer.sprite != defaultSprite)
+            else if (currentDepth <= gameManager.TopBorder)
             {
-                backgroundSpriteRenderer.sprite = defaultSprite;
+                if (currentDepth == -chunkSize)
+                {
+                    backgroundSpriteRenderer.sprite = oceanSurfaceSprite;
+                }
+                else
+                {
+                    backgroundSpriteRenderer.sprite = defaultSprite;
+                }
             }
+            else
+            {
+                UpdateResources();
+
+                if (backgroundSpriteRenderer.sprite != defaultSprite)
+                {
+                    backgroundSpriteRenderer.sprite = defaultSprite;
+                }
+            }
+            hasDoneInitialUpdate = true;
         }
     }
 
