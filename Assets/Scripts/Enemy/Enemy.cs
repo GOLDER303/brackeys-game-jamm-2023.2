@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float damage;
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private float angleoffset = 0f;
+    [SerializeField] private bool canMove = true;
 
     public float Damage => damage;
     public GameObject targetGameObject { set; private get; }
@@ -28,7 +29,10 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         RotateTowardsTarget();
-        MoveTowardsTarget();
+        if (canMove)
+        {
+            MoveTowardsTarget();
+        }
     }
 
     public void DealDamage(float damageAmount)
@@ -52,5 +56,15 @@ public class Enemy : MonoBehaviour
     private void MoveTowardsTarget()
     {
         transform.position = Vector3.MoveTowards(transform.position, targetGameObject.transform.position, moveSpeed * Time.deltaTime);
+    }
+
+    public void EnableMovement()
+    {
+        canMove = true;
+    }
+
+    public void DisableMovement()
+    {
+        canMove = false;
     }
 }
