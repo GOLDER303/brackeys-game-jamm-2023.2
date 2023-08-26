@@ -22,7 +22,7 @@ public class PersistentWeaponController : WeaponController
             spawnedWeapon.Setup(weaponData.stagesSOs[currentUpgradeStage]);
         }
 
-        for (int i = 0; i < weaponData.stagesSOs[currentUpgradeStage].count - spawnedWeapons.Count; i++)
+        while (spawnedWeapons.Count < weaponData.stagesSOs[currentUpgradeStage].count)
         {
             SpawnWeapon();
         }
