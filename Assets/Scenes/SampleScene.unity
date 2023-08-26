@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3329796c0111e3f4895786bfc57ee699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunkPrefab: {fileID: 7081545284502161622, guid: 17954ad4fad838947a472bdb07b7de50, type: 3}
+  chunkPrefab: {fileID: -8632912015584456133, guid: 17954ad4fad838947a472bdb07b7de50, type: 3}
   chunkSize: 15
   loadDistance: 3
   playerTransform: {fileID: 1070603523}

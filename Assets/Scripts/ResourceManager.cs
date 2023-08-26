@@ -5,12 +5,13 @@ using UnityEngine;
 public class ResourceManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] resourcesPrefabs;
-
     [SerializeField] private int minAmountOfResources = 1;
     [SerializeField] private int maxAmountOfResources = 5;
     [SerializeField] private ChunksManager chunksManager;
     [SerializeField] private DifficultyManager difficultyManager;
     [SerializeField] private int amountOfResourceTypePerDepthLevel;
+
+    public int MaxAmountOfResources => maxAmountOfResources;
 
     private float chunkSize;
     private readonly HashSet<Vector3> collectedResourcesPosition = new();
@@ -25,7 +26,7 @@ public class ResourceManager : MonoBehaviour
         PlayerController.OnResourceCollected -= HandleResourceCollected;
     }
 
-    private void Start()
+    private void Awake()
     {
         chunkSize = chunksManager.ChunkSize;
     }

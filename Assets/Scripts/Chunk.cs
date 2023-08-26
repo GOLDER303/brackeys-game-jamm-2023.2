@@ -16,7 +16,7 @@ public class Chunk : MonoBehaviour
     public float chunkSize { set; private get; }
 
     private Vector3 prevPosition;
-    private readonly List<GameObject> currentResources = new();
+    private GameObject[] currentResources;
     private float maxDepth;
     private Sprite defaultSprite;
 
@@ -24,6 +24,7 @@ public class Chunk : MonoBehaviour
     {
         maxDepth = gameManager.MaxDepth;
         defaultSprite = backgroundSpriteRenderer.sprite;
+        currentResources = new GameObject[resourceManager.MaxAmountOfResources];
     }
 
     private void Update()
@@ -34,36 +35,39 @@ public class Chunk : MonoBehaviour
         {
             UpdateResources();
             prevPosition = transform.position;
-        }
 
-        float currentDepth = -transform.position.y;
+            float currentDepth = -transform.position.y;
 
-        if (currentDepth >= maxDepth)
-        {
-            if (currentDepth - maxDepth >= chunkSize)
+            if (currentDepth >= maxDepth)
             {
-                backgroundSpriteRenderer.sprite = oceanUnderFloorSprite;
+                if (currentDepth - maxDepth >= chunkSize)
+                {
+                    backgroundSpriteRenderer.sprite = oceanUnderFloorSprite;
+                }
+                else
+                {
+                    backgroundSpriteRenderer.sprite = oceanFloorSprite;
+                }
             }
-            else
+            else if (backgroundSpriteRenderer.sprite != defaultSprite)
             {
-                backgroundSpriteRenderer.sprite = oceanFloorSprite;
+                backgroundSpriteRenderer.sprite = defaultSprite;
             }
-        }
-        else if (backgroundSpriteRenderer.sprite != defaultSprite)
-        {
-            backgroundSpriteRenderer.sprite = defaultSprite;
         }
     }
 
-    private void UpdateResources()
+    public void UpdateResources()
     {
-        for (int i = 0; i < currentResources.Count; i++)
+        int i = 0;
+
+        for (i = 0; i < currentResources.GetLength(0); i++)
         {
             Destroy(currentResources[i]);
-            currentResources[i] = null;
         }
 
         Vector3[] newResourcesPositions = resourceManager.GetResourcesPositions(transform.position);
+
+        i = 0;
 
         foreach (Vector3 resourcePosition in newResourcesPositions)
         {
@@ -73,7 +77,9 @@ public class Chunk : MonoBehaviour
             }
 
             GameObject spawnedResource = Instantiate(resourceManager.GetResourcePrefab(), resourcePosition, Quaternion.identity, transform);
-            currentResources.Add(spawnedResource);
+
+            currentResources[i] = spawnedResource;
+            i++;
         }
     }
 }

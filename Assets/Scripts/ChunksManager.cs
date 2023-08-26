@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChunksManager : MonoBehaviour
 {
-    [SerializeField] private GameObject chunkPrefab;
+    [SerializeField] private Chunk chunkPrefab;
     [SerializeField] private int chunkSize = 15;
     [SerializeField] private int loadDistance = 3;
     [SerializeField] private Transform playerTransform;
@@ -14,12 +14,12 @@ public class ChunksManager : MonoBehaviour
 
     public float ChunkSize => chunkSize;
 
-    private Transform[] chunksGameObjects;
+    private Chunk[] chunks;
     private Vector3 prevPlayerPosition;
 
     private void Start()
     {
-        chunksGameObjects = new Transform[(loadDistance * 2 + 1) * (loadDistance * 2 + 1)];
+        chunks = new Chunk[(loadDistance * 2 + 1) * (loadDistance * 2 + 1)];
         prevPlayerPosition = playerTransform.position;
 
         SpawnInitialChunks();
@@ -44,13 +44,13 @@ public class ChunksManager : MonoBehaviour
             {
                 Vector2 chunkCoordinates = new Vector2(xOffset, yOffset);
 
-                GameObject chunkGameObject = Instantiate(chunkPrefab, chunkCoordinates * chunkSize, Quaternion.identity, transform);
-                chunkGameObject.GetComponent<Chunk>().resourceManager = resourceManager;
-                chunkGameObject.GetComponent<Chunk>().gameManager = gameManager;
-                chunkGameObject.GetComponent<Chunk>().difficultyManager = difficultyManager;
-                chunkGameObject.GetComponent<Chunk>().chunkSize = chunkSize;
+                Chunk chunk = Instantiate(chunkPrefab, chunkCoordinates * chunkSize, Quaternion.identity, transform);
+                chunk.resourceManager = resourceManager;
+                chunk.gameManager = gameManager;
+                chunk.difficultyManager = difficultyManager;
+                chunk.chunkSize = chunkSize;
 
-                chunksGameObjects[i] = chunkGameObject.transform;
+                chunks[i] = chunk;
                 i++;
             }
         }
@@ -58,9 +58,9 @@ public class ChunksManager : MonoBehaviour
 
     private void UpdateChunks()
     {
-        foreach (Transform chunk in chunksGameObjects)
+        foreach (Chunk chunk in chunks)
         {
-            Vector2 distanceFromPlayer = chunk.position - playerTransform.position;
+            Vector2 distanceFromPlayer = chunk.transform.position - playerTransform.position;
 
             if (Mathf.Abs(distanceFromPlayer.x) > chunkSize * (loadDistance + 1))
             {
