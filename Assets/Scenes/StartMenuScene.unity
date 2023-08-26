@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: but beware of what might dwell in the acient depths
+  m_text: but beware of what might dwell in the ancient depths
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 386fa15f796febc40ad1e9b83c41496a, type: 2}
   m_sharedMaterial: {fileID: 8231636166345689531, guid: 386fa15f796febc40ad1e9b83c41496a, type: 2}
