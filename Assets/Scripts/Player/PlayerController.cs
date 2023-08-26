@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameManager gameManager;
     [SerializeField] private HealthBar healthBar;
+    [SerializeField] private GameObject upgradeMenuCanvas;
 
     private HealthSystem healthSystem;
     private PlayerInput playerInput;
@@ -27,6 +28,18 @@ public class PlayerController : MonoBehaviour
         gameManager.GameOver();
         // TODO: Death animation
         Destroy(gameObject);
+    }
+
+    private void OnOpenUpgradeMenu()
+    {
+        if (upgradeMenuCanvas.activeSelf)
+        {
+            upgradeMenuCanvas.SetActive(false);
+        }
+        else
+        {
+            upgradeMenuCanvas.SetActive(true);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
