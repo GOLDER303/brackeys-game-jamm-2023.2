@@ -59,8 +59,10 @@ public class ResourceManager : MonoBehaviour
         return resourcesPositions;
     }
 
-    public GameObject GetResourcePrefab()
+    public GameObject GetResourcePrefab(Vector3 chunkCoordinates)
     {
+        Random.InitState(Mathf.FloorToInt(chunkCoordinates.x) ^ Mathf.FloorToInt(chunkCoordinates.y));
+
         int minResourcePrefabIndex = (int)Mathf.Floor(resourcesPrefabs.GetLength(0) * difficultyManager.CurrentDepthPercentage);
         int maxResourcePrefabIndex = minResourcePrefabIndex + amountOfResourceTypePerDepthLevel;
 
