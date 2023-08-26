@@ -8,7 +8,7 @@ public class ChunksManager : MonoBehaviour
     [SerializeField] private int chunkSize = 15;
     [SerializeField] private int loadDistance = 3;
     [SerializeField] private Transform playerTransform;
-    [SerializeField] private ResourceManager resourceManager;
+    [SerializeField] private ResourceSpawningManager resourceSpawningManager;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private DifficultyManager difficultyManager;
 
@@ -45,7 +45,7 @@ public class ChunksManager : MonoBehaviour
                 Vector2 chunkCoordinates = new Vector2(xOffset, yOffset);
 
                 Chunk chunk = Instantiate(chunkPrefab, chunkCoordinates * chunkSize, Quaternion.identity, transform);
-                chunk.resourceManager = resourceManager;
+                chunk.resourceSpawningManager = resourceSpawningManager;
                 chunk.gameManager = gameManager;
                 chunk.difficultyManager = difficultyManager;
                 chunk.chunkSize = chunkSize;

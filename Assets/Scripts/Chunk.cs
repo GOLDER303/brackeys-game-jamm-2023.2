@@ -11,7 +11,7 @@ public class Chunk : MonoBehaviour
     [SerializeField] private Sprite oceanUnderFloorSprite;
     [SerializeField] private Sprite oceanSurfaceSprite;
 
-    public ResourceManager resourceManager { set; private get; }
+    public ResourceSpawningManager resourceSpawningManager { set; private get; }
     public GameManager gameManager { set; private get; }
     public DifficultyManager difficultyManager { set; private get; }
     public float chunkSize { set; private get; }
@@ -26,7 +26,7 @@ public class Chunk : MonoBehaviour
     {
         maxDepth = gameManager.MaxDepth;
         defaultSprite = backgroundSpriteRenderer.sprite;
-        currentResources = new GameObject[resourceManager.MaxAmountOfResources];
+        currentResources = new GameObject[resourceSpawningManager.MaxAmountOfResources];
     }
 
     private void Update()
@@ -83,7 +83,7 @@ public class Chunk : MonoBehaviour
             Destroy(currentResources[i]);
         }
 
-        Vector3[] newResourcesPositions = resourceManager.GetResourcesPositions(transform.position);
+        Vector3[] newResourcesPositions = resourceSpawningManager.GetResourcesPositions(transform.position);
 
         i = 0;
 
@@ -94,7 +94,7 @@ public class Chunk : MonoBehaviour
                 continue;
             }
 
-            GameObject spawnedResource = Instantiate(resourceManager.GetResourcePrefab(), resourcePosition, Quaternion.identity, transform);
+            GameObject spawnedResource = Instantiate(resourceSpawningManager.GetResourcePrefab(), resourcePosition, Quaternion.identity, transform);
 
             currentResources[i] = spawnedResource;
             i++;

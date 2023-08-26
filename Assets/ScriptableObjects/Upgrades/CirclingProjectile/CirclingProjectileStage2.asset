@@ -19,4 +19,4 @@ MonoBehaviour:
   damage: 100
   cooldown: 0
   speed: 15
-  count: 2
+  count: 4
