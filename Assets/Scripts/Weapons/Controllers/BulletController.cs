@@ -10,5 +10,6 @@ public class BulletController : OneShotWeaponController
 
         GameObject spawnedBullet = Instantiate(weaponPrefab, transform.position, Quaternion.identity);
         spawnedBullet.GetComponent<BulletBehaviour>().Direction = playerMovement.facingDirection;
+        spawnedBullet.GetComponent<BulletBehaviour>().Setup(weaponData.stagesSOs[currentUpgradeStage]);
     }
 }

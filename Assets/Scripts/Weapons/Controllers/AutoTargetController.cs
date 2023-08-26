@@ -10,5 +10,6 @@ public class AutoTargetController : OneShotWeaponController
 
         GameObject spawnedAutoTarget = Instantiate(weaponPrefab, transform.position, Quaternion.identity);
         spawnedAutoTarget.GetComponent<AutoTargetBehaviour>().controllerGameObject = gameObject;
+        spawnedAutoTarget.GetComponent<AutoTargetBehaviour>().Setup(weaponData.stagesSOs[currentUpgradeStage]);
     }
 }

@@ -440,9 +440,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7454549700419899983}
+  - component: {fileID: 8599596447207927468}
   - component: {fileID: 7391528265813612218}
   - component: {fileID: 6358379000339600426}
-  - component: {fileID: 8599596447207927468}
+  - component: {fileID: 6769216750846151535}
   m_Layer: 7
   m_Name: ElectricAuraWeapon
   m_TagString: Weapon
@@ -466,6 +467,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &8599596447207927468
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6866987053968148360}
+  m_Enabled: 1
+  m_SortingLayerID: 1340119713
+  m_SortingLayer: 2
+  m_SortingOrder: 10
+  m_SortAtRoot: 0
 --- !u!58 &7391528265813612218
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -513,19 +526,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534c89718bec24c4387cf302bfd49ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
---- !u!210 &8599596447207927468
-SortingGroup:
+  weaponBehaviour: {fileID: 6769216750846151535}
+--- !u!114 &6769216750846151535
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6866987053968148360}
   m_Enabled: 1
-  m_SortingLayerID: 1340119713
-  m_SortingLayer: 2
-  m_SortingOrder: 10
-  m_SortAtRoot: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d04661266b05d4787030c275f41ed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!1 &7245837599992401258
 GameObject:
   m_ObjectHideFlags: 0
