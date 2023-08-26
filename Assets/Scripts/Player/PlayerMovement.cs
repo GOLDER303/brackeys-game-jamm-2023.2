@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private float topBorderBuffer = 5f;
 
     private Vector2 moveVector;
     public Vector2 facingDirection { get; private set; } = Vector2.right;
@@ -30,9 +31,9 @@ public class PlayerMovement : MonoBehaviour
             transform.position = new Vector3(transform.position.x, -(gameManager.MaxDepth - 1), transform.position.z);
         }
 
-        if (transform.position.y > gameManager.TopBorder)
+        if (transform.position.y > gameManager.TopBorder - topBorderBuffer)
         {
-            transform.position = new Vector3(transform.position.x, gameManager.TopBorder, transform.position.z);
+            transform.position = new Vector3(transform.position.x, gameManager.TopBorder - topBorderBuffer, transform.position.z);
         }
     }
 
