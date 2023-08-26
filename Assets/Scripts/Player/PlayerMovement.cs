@@ -29,6 +29,11 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, -(gameManager.MaxDepth - 1), transform.position.z);
         }
+
+        if (transform.position.y > gameManager.TopBorder)
+        {
+            transform.position = new Vector3(transform.position.x, gameManager.TopBorder, transform.position.z);
+        }
     }
 
     private void OnMove(InputValue inputValue)

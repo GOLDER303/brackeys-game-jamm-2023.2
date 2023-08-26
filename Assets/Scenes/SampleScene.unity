@@ -399,6 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDepth: 1000
+  topBorder: 0
 --- !u!4 &406296651
 Transform:
   m_ObjectHideFlags: 0
