@@ -26,6 +26,13 @@ public class OneShotWeaponController : WeaponController
 
     protected override void Upgrade()
     {
+        base.Upgrade();
+
+        if (currentUpgradeStage < 0)
+        {
+            return;
+        }
+
         if (!isEnabled)
         {
             StartCoroutine(AttackCoroutine());
@@ -38,8 +45,6 @@ public class OneShotWeaponController : WeaponController
                 cooldown = weaponData.stagesSOs[currentUpgradeStage].cooldown;
             }
         }
-
-        base.Upgrade();
     }
 
     protected virtual void Attack() { }

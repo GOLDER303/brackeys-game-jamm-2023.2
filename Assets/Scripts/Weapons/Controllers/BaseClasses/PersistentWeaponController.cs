@@ -17,6 +17,13 @@ public class PersistentWeaponController : WeaponController
 
     protected override void Upgrade()
     {
+        base.Upgrade();
+
+        if (currentUpgradeStage < 0)
+        {
+            return;
+        }
+
         foreach (PersistentWeaponBehaviour spawnedWeapon in spawnedWeapons)
         {
             spawnedWeapon.Setup(weaponData.stagesSOs[currentUpgradeStage]);
@@ -26,8 +33,6 @@ public class PersistentWeaponController : WeaponController
         {
             SpawnWeapon();
         }
-
-        base.Upgrade();
     }
 
     private void SpawnWeapon()
