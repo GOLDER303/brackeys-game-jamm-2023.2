@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5622c5de263e1fb47ab2bc39dbbbb3f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 50
   speed: 10
   radius: 6
 --- !u!114 &6581753403669998396
@@ -158,4 +159,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534c89718bec24c4387cf302bfd49ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  weaponBehaviour: {fileID: -4582276435676876978}

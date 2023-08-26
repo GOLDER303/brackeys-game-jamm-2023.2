@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OneShotWeaponController : MonoBehaviour
+public class OneShotWeaponController : WeaponController
 {
     [SerializeField] protected GameObject weaponPrefab;
     [SerializeField] protected float cooldown;
     [SerializeField] protected PlayerMovement playerMovement;
 
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         StartCoroutine(AttackCoroutine());
     }
 
@@ -21,6 +22,16 @@ public class OneShotWeaponController : MonoBehaviour
         {
             Attack();
             yield return new WaitForSeconds(cooldown);
+        }
+    }
+
+    protected override void Upgrade()
+    {
+        base.Upgrade();
+
+        if (currentUpgradeStage < maxUpgradeStage - 1)
+        {
+            cooldown = weaponData.stagesSOs[currentUpgradeStage].cooldown;
         }
     }
 

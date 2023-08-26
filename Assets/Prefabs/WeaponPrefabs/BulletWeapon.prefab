@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9550da43fcac34d97dd6e82cc99e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 50
   lifeTime: 2
   speed: 25
 --- !u!114 &6013777955311884843
@@ -159,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534c89718bec24c4387cf302bfd49ec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  weaponBehaviour: {fileID: 7861998935485168850}
 --- !u!114 &6722845061926162517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,4 +173,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f395ef339950cca48b76f30895a53ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToBeDestroyed: {fileID: 0}
+  objectToBeDestroyed: {fileID: 6866987053968148360}
