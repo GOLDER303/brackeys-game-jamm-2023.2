@@ -39,12 +39,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
             float damageAmount = other.gameObject.GetComponent<Enemy>().Damage;
-            healthSystem.DealDamage(damageAmount);
+            healthSystem.DealDamage(damageAmount * Time.deltaTime);
         }
 
         if (healthSystem.health <= 0)
