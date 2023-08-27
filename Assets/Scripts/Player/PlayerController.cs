@@ -52,4 +52,12 @@ public class PlayerController : MonoBehaviour
             HandleDeath();
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Artifact"))
+        {
+            gameManager.Win();
+        }
+    }
 }
