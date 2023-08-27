@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private Enemy[] enemyPrefabs;
     [SerializeField] private GameObject playerGameObject;
+    [SerializeField] private float initialDelay = 4f;
     [SerializeField] private float minSpawnDelay = 4f;
     [SerializeField] private float maxSpawnDelay = 1f;
     [SerializeField] private float spawnDistance = 15f;
@@ -14,6 +15,12 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(StartSpawningEnemies());
+    }
+
+    private IEnumerator StartSpawningEnemies()
+    {
+        yield return new WaitForSeconds(initialDelay);
         StartCoroutine(SpawnEnemy());
     }
 

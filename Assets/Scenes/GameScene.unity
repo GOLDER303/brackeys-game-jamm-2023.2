@@ -3446,9 +3446,10 @@ MonoBehaviour:
   - {fileID: 4846297258015729042, guid: cfa398ed3247ba8458c736eb7f14e72b, type: 3}
   - {fileID: 4846297258015729042, guid: dac72cc447e9788409263a8b181e9e57, type: 3}
   playerGameObject: {fileID: 1070603521}
+  initialDelay: 2
   minSpawnDelay: 4
   maxSpawnDelay: 1
-  spawnDistance: 10
+  spawnDistance: 20
   difficultyManager: {fileID: 1449882688}
   amountOfEnemyTypePerDepthLevel: 2
 --- !u!1 &1449882687
