@@ -12,16 +12,18 @@ public class CirclingWeaponBehaviour : PersistentWeaponBehaviour
 
     public CirclingWeaponBehaviour()
     {
-        instanceIndex = instanceCount;
         instanceCount++;
+        instanceIndex = instanceCount;
     }
 
     private void Update()
     {
-        float angle = speed * Time.time + instanceIndex * (360f / instanceCount);
+        float angle = speed * Time.time + (((2 * Mathf.PI) / instanceCount) * instanceIndex);
 
-        Vector3 newPosition = followedObject.transform.position + Quaternion.Euler(0, 0, angle) * (Vector3.right * radius);
+        Vector3 newPosition = followedObject.transform.position + new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * radius;
+
 
         transform.position = newPosition;
+
     }
 }

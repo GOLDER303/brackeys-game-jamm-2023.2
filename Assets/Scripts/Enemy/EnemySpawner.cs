@@ -37,7 +37,7 @@ public class EnemySpawner : MonoBehaviour
 
             spawnedEnemy.targetGameObject = playerGameObject;
 
-            yield return new WaitForSeconds(minSpawnDelay + difficultyManager.CurrentDepthPercentage * (maxSpawnDelay - minSpawnDelay));
+            yield return new WaitForSeconds(minSpawnDelay + (1 - difficultyManager.CurrentDepthPercentage) * (maxSpawnDelay - minSpawnDelay));
         }
     }
 

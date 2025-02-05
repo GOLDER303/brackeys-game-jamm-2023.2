@@ -8,8 +8,8 @@ public class UpgradeStageScriptableObject : ScriptableObject
     public int resource3Amount;
     public int resource4Amount;
 
-    public int damage;
-    public int cooldown;
-    public int speed;
+    public float damage;
+    public float cooldown;
+    public float speed;
     public int count;
 }

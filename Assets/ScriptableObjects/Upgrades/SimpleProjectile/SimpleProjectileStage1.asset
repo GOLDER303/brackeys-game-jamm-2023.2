@@ -16,7 +16,7 @@ MonoBehaviour:
   resource2Amount: 2
   resource3Amount: 0
   resource4Amount: 0
-  damage: 50
-  cooldown: 1
+  damage: 40
+  cooldown: 0.2
   speed: 25
   count: 0

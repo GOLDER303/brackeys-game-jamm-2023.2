@@ -617,7 +617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 20
-  damage: 25
+  damage: 75
   healthBar: {fileID: 6006551784877593355}
   angleoffset: 280
   canMove: 0

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27a8f7a953f680a4eb97f5d408961c7f, type: 3}
   m_Name: AutoTargetStage2
   m_EditorClassIdentifier: 
-  resource1Amount: 2
+  resource1Amount: 0
   resource2Amount: 2
-  resource3Amount: 2
-  resource4Amount: 2
+  resource3Amount: 15
+  resource4Amount: 10
   damage: 50
   cooldown: 1
-  speed: 10
+  speed: 25
   count: 0

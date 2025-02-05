@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 448c1496a04bac148b253e7ada0f06fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 15
   damage: 25
   healthBar: {fileID: 6006551784877593355}
   angleoffset: 0

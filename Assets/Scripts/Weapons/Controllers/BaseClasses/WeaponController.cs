@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
 using UnityEngine;
 
 public class WeaponController : MonoBehaviour
@@ -34,6 +35,12 @@ public class WeaponController : MonoBehaviour
 
     private void UpdateUIElement()
     {
+        if (currentUpgradeStage + 1 >= maxUpgradeStage)
+        {
+            Destroy(upgradeUIElement.gameObject);
+            return;
+        }
+
         upgradeUIElement.Setup(weaponData.stagesSOs[currentUpgradeStage + 1]);
     }
 }

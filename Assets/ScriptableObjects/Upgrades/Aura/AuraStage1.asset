@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27a8f7a953f680a4eb97f5d408961c7f, type: 3}
   m_Name: AuraStage1
   m_EditorClassIdentifier: 
-  resource1Amount: 2
-  resource2Amount: 2
+  resource1Amount: 10
+  resource2Amount: 10
   resource3Amount: 0
   resource4Amount: 0
-  damage: 50
+  damage: 25
   cooldown: 1
   speed: 0
   count: 0
